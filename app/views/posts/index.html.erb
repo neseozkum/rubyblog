@@ -1,0 +1,21 @@
+<div class="section">
+	<div class="container">
+		<% @posts.each do |post| %>
+			<div class="card">
+		  <div class="card-content">
+		    <div class="media">
+		      <div class="media-content">
+		        <p class="title is-4"><%= post.title  %></p>
+		      </div>
+		    </div>
+		    <div class="content">
+		     	<%= truncate(post.body, :length=> 35) %>
+		    </div>
+		    <%= link_to "Read post", post  %>
+		  </div>
+		</div>
+		<% end %>
+	</div>
+</div>
+
+
